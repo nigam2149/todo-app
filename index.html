@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Advanced Todo App</title>
+  </head>
+  <body>
+    <section class="todo">
+      <h2>Advanced To-Do List</h2>
+      
+      <!-- Input Section with Extra Features -->
+      <div class="input-section">
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            id="todoInput"
+            placeholder="Add a new todo"
+          />
+          <button class="btn">Add</button>
+        </div>
+        
+        <!-- Extra Features: Priority, Category, Due Date -->
+        <div class="extra-options">
+          <select id="prioritySelect" class="select-field">
+            <option value="low">Low Priority</option>
+            <option value="medium" selected>Medium Priority</option>
+            <option value="high">High Priority</option>
+          </select>
+          
+          <select id="categorySelect" class="select-field">
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="shopping">Shopping</option>
+            <option value="health">Health</option>
+            <option value="other">Other</option>
+          </select>
+          
+          <input type="date" id="dueDateInput" class="date-field" />
+        </div>
+      </div>
+
+      <!-- Search and Filter Section -->
+      <div class="filter-section">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-field"
+          placeholder="Search todos..."
+        />
+        
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+          <button class="filter-btn" data-filter="high">High Priority</button>
+        </div>
+      </div>
+
+      <!-- Todo List -->
+      <ul class="scroll" id="todoList"></ul>
+
+      <!-- Counter and Actions -->
+      <div>
+        <hr class="counter" />
+        <div class="counter-container">
+          <p>
+            <span id="todoCount">0</span> items total | 
+            <span id="completedCount">0</span> completed
+          </p>
+          <div class="action-buttons">
+            <button id="deleteCompletedButton" class="action-btn">Delete Completed</button>
+            <button id="deleteButton" class="action-btn">Delete All</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <p class="made-by">Made By</p>
+        <p class="author">Nigam Mishra</p>
+      </div>
+    </footer>
+  </body>
+</html>
